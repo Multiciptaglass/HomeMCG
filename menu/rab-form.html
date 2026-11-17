@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pengajuan RAB | MCG Facade</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <a href="../index.html" class="brand">
+          <span class="brand-box">MCG</span>
+          <span>Multi Cipta Glass</span>
+        </a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="menu/../layanan.html">Keahlian & Layanan</a></li>
+          <li><a href="menu/../proyek.html">Galeri Proyek</a></li>
+          <li><a href="menu/../workshop.html">Workshop & Lokasi</a></li>
+          <li><a href="menu/../tentang.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- FORMULIR UTAMA -->
+    <section class="section">
+      <div class="container" style="max-width: 720px">
+        <div class="card">
+          <span
+            class="badge"
+            style="color: #003e1c; border-color: rgba(11, 73, 41, 0.4)"
+            >Sistem Estimasi Online</span
+          >
+          <h1>Formulir Pengajuan RAB & Tender</h1>
+          <p
+            style="
+              color: var(--text-muted);
+              font-size: 0.92rem;
+              margin-bottom: 24px;
+            "
+          >
+            Isi data proyek Anda di bawah ini. Data akan terekam secara otomatis
+            di perangkat Anda dan dapat langsung dikirim ke WhatsApp atau Email
+            tim estimator kami.
+          </p>
+
+          <!-- FormSubmit untuk pengiriman ke Email (ganti email_anda@gmail.com dengan email Anda) -->
+          <form id="formRab" onsubmit="kirimKeEmail(event)" method="POST">
+            <input
+              type="hidden"
+              name="_subject"
+              value="Pengajuan RAB Baru dari Website MCG!"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <div class="form-group">
+              <label>Nama Lengkap / PIC</label>
+              <input
+                type="text"
+                id="nama"
+                name="Nama"
+                class="form-control"
+                required
+                placeholder="Contoh: Ir. Budi Santoso"
+              />
+            </div>
+            <div class="form-group">
+              <label>Perusahaan / Konsultan</label>
+              <input
+                type="text"
+                id="perusahaan"
+                name="Perusahaan"
+                class="form-control"
+                required
+                placeholder="PT Konstruksi Utama"
+              />
+            </div>
+            <div class="form-group">
+              <label>Nomor WhatsApp Aktif</label>
+              <input
+                type="tel"
+                id="whatsapp"
+                name="WhatsApp"
+                class="form-control"
+                required
+                placeholder="0812xxxxxxxx"
+              />
+            </div>
+            <div class="form-group">
+              <label>Kategori Layanan Fasad</label>
+              <select id="layanan" name="Layanan" class="form-control">
+                <option>Curtain Wall (Stick / Unitized)</option>
+                <option>Aluminium Composite Panel (ACP)</option>
+                <option>Kusen, Pintu & Jendela Aluminium</option>
+                <option>Kanopi Kaca / Skylight / Spider Glass</option>
+                <option>Paket Lengkap Fasad Gedung</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Detail Proyek & Estimasi Luas (m²)</label>
+              <textarea
+                id="detail"
+                name="Detail_Proyek"
+                class="form-control"
+                rows="4"
+                required
+                placeholder="Contoh: Gedung kantor 8 lantai di Jakarta Barat, estimasi luas fasad 2.500 m²."
+              ></textarea>
+            </div>
+
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-top: 24px;
+              "
+            >
+              <button
+                type="button"
+                class="btn"
+                style="flex: 1; background: #25d366; color: #fff"
+                onclick="kirimKeWhatsApp(event)"
+              >
+                💬 Kirim via WhatsApp
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="flex: 1"
+                onclick="kirimKeEmail(event)"
+              >
+                ✉️ Kirim via Email
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Kotak Riwayat Terekam -->
+        <div class="card" style="margin-top: 30px; background: var(--bg-soft)">
+          <h3 style="font-size: 1.1rem; margin-bottom: 12px">
+            📋 Riwayat Pengajuan Terekam (Di Perangkat Ini)
+          </h3>
+          <div id="listRiwayat"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container grid-3">
+        <div>
+          <h4>PT Multi Cipta Glass (MCG)</h4>
+          <p style="font-size: 0.9rem">
+            Kontraktor spesialis fasad kaca & aluminium arsitektural terpercaya.
+          </p>
+        </div>
+        <div>
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="menu/../layanan.html">Keahlian & Layanan</a></li>
+            <li><a href="menu/../proyek.html">Galeri Proyek</a></li>
+            <li><a href="menu/../workshop.html">Workshop & Lokasi</a></li>
+            <li><a href="menu/../tentang.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <p style="font-size: 0.9rem">
+            Jl. Asem II GG. H. Muhammad No. 53 EE, Cipete Selatan, Cilandak,
+            Jakarta Sealtan 12410<br />Email: companymulticiptaglass@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 PT Multi Cipta Glass. Hak Cipta Dilindungi.
+      </div>
+    </footer>
+
+    <a href="https://wa.me/6282111809332" target="_blank" class="wa-float"
+      >💬 Chat Estimator</a
+    >
+    <script src="../script.js"></script>
+  </body>
+</html>

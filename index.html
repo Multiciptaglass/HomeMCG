@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda | MCG Glass & Aluminium</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand">
+          <span class="brand-box">MCG</span>
+          <span>Multi Cipta Glass</span>
+        </a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="menu/layanan.html">Keahlian & Layanan</a></li>
+          <li><a href="menu/proyek.html">Galeri Proyek</a></li>
+          <li><a href="menu/workshop.html">Workshop & Lokasi</a></li>
+          <li><a href="menu/tentang.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header
+      style="
+        background: linear-gradient(135deg, var(--primary) 0%, #002d13 100%);
+        color: #ffffff;
+        padding: 90px 0;
+      "
+    >
+      <div class="container grid-2" style="align-items: center">
+        <div>
+          <span class="badge">✨ Spesialis Fasad & Aluminium Arsitektural</span>
+          <h1 style="font-size: 2.8rem; margin-top: 12px; color: #fff">
+            Presisi Fasad Gedung Tinggi & Komersial Modern
+          </h1>
+          <p
+            style="
+              font-size: 1.1rem;
+              opacity: 0.9;
+              margin-bottom: 28px;
+              color: #cbd5e1;
+            "
+          >
+            Multi Cipta Glass (MCG) menghadirkan solusi rekayasa, fabrikasi, dan
+            instalasi Curtain Wall, ACP, Kaca Tempered, serta Kusen Aluminium
+            berstandar tinggi.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap">
+            <a href="rab-form.html" class="btn btn-mint">Buat Pengajuan RAB</a>
+            <a
+              href="menu/proyek.html"
+              class="btn btn-outline"
+              style="color: #fff; border-color: rgba(255, 255, 255, 0.4)"
+              >Lihat Portofolio</a
+            >
+          </div>
+        </div>
+        <div>
+          <img
+            src="img/logoback.png"
+            alt="Gedung Curtain Wall"
+            style="
+              border-radius: var(--radius);
+              box-shadow: 0 20px 60px rgba(255, 255, 255, 0.3);
+            "
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- STATISTIK -->
+    <section
+      style="
+        background: #ffffff;
+        padding: 32px 0;
+        border-bottom: 1px solid var(--border);
+      "
+    >
+      <div class="container grid-3" style="text-align: center">
+        <div>
+          <h3 style="font-size: 2.2rem; color: var(--primary-light)">150+</h3>
+          <p style="color: var(--text-muted); font-weight: 500">
+            Proyek Selesai
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size: 2.2rem; color: var(--primary-light)">
+            10+ Tahun
+          </h3>
+          <p style="color: var(--text-muted); font-weight: 500">
+            Pengalaman Industri
+          </p>
+        </div>
+        <div>
+          <h3 style="font-size: 2.2rem; color: var(--primary-light)">100%</h3>
+          <p style="color: var(--text-muted); font-weight: 500">
+            Standar Material SNI
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEUNGGULAN UTAMA -->
+    <section class="section">
+      <div class="container">
+        <div
+          class="section-header"
+          style="text-align: center; margin: 0 auto 44px auto"
+        >
+          <span
+            class="badge"
+            style="color: #003e1c; border-color: rgba(11, 73, 41, 0.4)"
+            >Mengapa Memilih MCG</span
+          >
+          <h2>Standar Rekayasa Fasad Terukur</h2>
+          <p>
+            Didukung tim engineering berpengalaman dan workshop fabrikasi
+            mandiri untuk menjamin kualitas estetika dan struktural.
+          </p>
+        </div>
+        <div class="grid-3">
+          <div class="card" style="border-top: 4px solid var(--primary-light)">
+            <div style="font-size: 2rem; margin-bottom: 12px">🏭</div>
+            <h3>Fabrikasi In-House Presisi</h3>
+            <p>
+              Pemotongan dan perakitan modul unitized maupun stick system
+              dilakukan di workshop sendiri dengan mesin CNC berakurasi tinggi.
+            </p>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--primary-light)">
+            <div style="font-size: 2rem; margin-bottom: 12px">🛡️</div>
+            <h3>Material Bersertifikat</h3>
+            <p>
+              Menggunakan profil aluminium pilihan (Alexindo, YKK AP) serta kaca
+              Asahimas/Mulia dengan garansi resmi ketahanan cuaca.
+            </p>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--primary-light)">
+            <div style="font-size: 2rem; margin-bottom: 12px">📐</div>
+            <h3>Garansi & Water Tightness</h3>
+            <p>
+              Setiap instalasi melalui pengujian ketahanan air guna memastikan
+              bangunan aman dari risiko kebocoran.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container grid-3">
+        <div>
+          <h4>PT Multi Cipta Glass (MCG)</h4>
+          <p style="font-size: 0.9rem">
+            Kontraktor spesialis fasad kaca & aluminium arsitektural terpercaya.
+          </p>
+        </div>
+        <div>
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="menu/layanan.html">Keahlian & Layanan</a></li>
+            <li><a href="menu/proyek.html">Galeri Proyek</a></li>
+            <li><a href="menu/workshop.html">Workshop & Lokasi</a></li>
+            <li><a href="menu/tentang.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <p style="font-size: 0.9rem">
+            Jl. Asem II GG. H. Muhammad No. 53 EE, Cipete Selatan, Cilandak,
+            Jakarta Sealtan 12410<br />Email: companymulticiptaglass@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 PT Multi Cipta Glass. Hak Cipta Dilindungi.
+      </div>
+    </footer>
+
+    <a href="https://wa.me/6282111809332" target="_blank" class="wa-float"
+      >💬 Chat Estimator</a
+    >
+    <script src="script.js"></script>
+  </body>
+</html>

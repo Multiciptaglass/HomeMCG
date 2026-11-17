@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop & Lokasi | MCG Facade</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <a href="../index.html" class="brand">
+          <span class="brand-box">MCG</span>
+          <span>Multi Cipta Glass</span>
+        </a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="menu/../layanan.html">Keahlian & Layanan</a></li>
+          <li><a href="menu/../proyek.html">Galeri Proyek</a></li>
+          <li>
+            <a href="menu/../workshop.html" class="active">Workshop & Lokasi</a>
+          </li>
+          <li><a href="menu/../tentang.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- FASILITAS WORKSHOP -->
+    <section class="section">
+      <div class="container grid-2" style="align-items: center">
+        <div>
+          <span
+            class="badge"
+            style="color: #003e1c; border-color: rgba(11, 73, 41, 0.4)"
+            >Fasilitas Produksi Mandiri</span
+          >
+          <h1>Workshop Fabrikasi & Quality Control</h1>
+          <p style="color: var(--text-muted); margin: 16px 0">
+            Seluruh proses pemotongan profil aluminium, routing ACP, hingga
+            perakitan modul curtain wall dilakukan di workshop mandiri kami
+            untuk menjamin akurasi sebelum dikirim ke lokasi proyek.
+          </p>
+          <ul
+            style="
+              margin-left: 20px;
+              color: var(--text-muted);
+              line-height: 1.8;
+              font-size: 0.92rem;
+            "
+          >
+            <li>Mesin Double Head Cutting Saw presisi tinggi</li>
+            <li>Mesin CNC Router khusus grooving & bending ACP</li>
+            <li>Area penyimpanan kaca dengan rak pengaman standar K3</li>
+            <li>Armada pengiriman internal wilayah Jabodetabek & Jawa</li>
+          </ul>
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+            alt="Workshop MCG"
+            style="border-radius: var(--radius); box-shadow: var(--shadow)"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE MAPS & LOKASI -->
+    <section class="section section-soft">
+      <div class="container">
+        <div
+          class="section-header"
+          style="text-align: center; margin: 0 auto 36px auto"
+        >
+          <span
+            class="badge"
+            style="color: #003e1c; border-color: rgba(11, 73, 41, 0.4)"
+            >Peta & Alamat</span
+          >
+          <h2>Kunjungi Workshop & Kantor Teknik Kami</h2>
+          <p>
+            Anda dipersilakan menjadwalkan kunjungan untuk melihat langsung
+            proses fabrikasi fasad.
+          </p>
+        </div>
+
+        <div class="grid-2" style="align-items: center">
+          <div class="card">
+            <h3>Kantor & Workshop Utama</h3>
+            <p style="color: var(--text-muted); margin: 12px 0 16px 0">
+              <strong>Alamat:</strong><br />
+              Jl. Asem II GG. H. Muhammad No. 53 EE, Cipete Selatan, Cilandak,
+              Jakarta Sealtan 12410
+            </p>
+            <p style="color: var(--text-muted); margin-bottom: 16px">
+              <strong>Jam Operasional:</strong><br />
+              Senin – Jumat: 08.00 – 17.00 WIB<br />
+              Sabtu: 08.00 – 13.00 WIB
+            </p>
+            <a
+              href="menu/../rab-form.html"
+              class="btn btn-primary"
+              style="width: 100%; text-align: center"
+              >Jadwalkan Kunjungan!</a
+            >
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div
+            style="
+              border-radius: var(--radius);
+              overflow: hidden;
+              border: 1px solid var(--border);
+              box-shadow: var(--shadow);
+              height: 350px;
+            "
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9307264496256!2d106.80228867589933!3d-6.272839761408146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f191c1e35917%3A0x34cd2d17bc9708df!2sJl.%20Asem%20II%20Gg.%20H.%20Moh.%20No.53%2C%20RT.4%2FRW.3%2C%20Cipete%20Sel.%2C%20Kec.%20Cilandak%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012410!5e0!3m2!1sen!2sid!4v1794811429189!5m2!1sen!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container grid-3">
+        <div>
+          <h4>PT Multi Cipta Glass (MCG)</h4>
+          <p style="font-size: 0.9rem">
+            Kontraktor spesialis fasad kaca & aluminium arsitektural terpercaya.
+          </p>
+        </div>
+        <div>
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="menu/../layanan.html">Keahlian & Layanan</a></li>
+            <li><a href="menu/../proyek.html">Galeri Proyek</a></li>
+            <li><a href="menu/../workshop.html">Workshop & Lokasi</a></li>
+            <li><a href="menu/../tentang.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <p style="font-size: 0.9rem">
+            Jl. Asem II GG. H. Muhammad No. 53 EE, Cipete Selatan, Cilandak,
+            Jakarta Sealtan 12410<br />Email: companymulticiptaglass@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 PT Multi Cipta Glass. Hak Cipta Dilindungi.
+      </div>
+    </footer>
+
+    <a href="https://wa.me/6281200000000" target="_blank" class="wa-float"
+      >💬 Chat Estimator</a
+    >
+    <script src="../script.js"></script>
+  </body>
+</html>

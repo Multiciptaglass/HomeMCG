@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami & Struktur Organisasi | MCG</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      /* Styling Bagan Struktur Organisasi Responsif */
+      .org-chart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 24px;
+      }
+      .org-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        width: 100%;
+      }
+      .org-top {
+        max-width: 340px;
+        background: linear-gradient(135deg, var(--primary) 0%, #005629 100%);
+        color: #fff;
+        border: none;
+      }
+      .org-top h4 {
+        color: #fff;
+      }
+      .org-line-vertical {
+        width: 2px;
+        height: 30px;
+        background: var(--primary-light);
+      }
+      .org-level-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        width: 100%;
+        position: relative;
+        padding-top: 24px;
+      }
+      .org-level-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 16%;
+        right: 16%;
+        height: 2px;
+        background: var(--primary-light);
+      }
+      .org-branch {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .org-branch::before {
+        content: "";
+        position: absolute;
+        top: -24px;
+        width: 2px;
+        height: 24px;
+        background: var(--primary-light);
+      }
+      .org-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--bg-soft);
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin: 0 auto 10px auto;
+        border: 2px solid var(--mint);
+      }
+      .org-top .org-avatar {
+        background: rgba(255, 255, 255, 0.15);
+        color: var(--mint);
+      }
+      .org-role {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--primary-light);
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        display: block;
+      }
+      .org-team-list {
+        list-style: none;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px dashed var(--border);
+        text-align: left;
+        font-size: 0.84rem;
+        color: var(--text-muted);
+      }
+      .org-team-list li {
+        margin-bottom: 4px;
+        padding-left: 14px;
+        position: relative;
+      }
+      .org-team-list li::before {
+        content: "•";
+        color: var(--primary-light);
+        position: absolute;
+        left: 0;
+      }
+      @media (max-width: 820px) {
+        .org-level-2 {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          padding-top: 0;
+        }
+        .org-level-2::before,
+        .org-branch::before {
+          display: none;
+        }
+        .org-line-vertical {
+          height: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <a href="../index.html" class="brand">
+          <span class="brand-box">MCG</span>
+          <span>Multi Cipta Glass</span>
+        </a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="menu/../layanan.html">Keahlian & Layanan</a></li>
+          <li><a href="menu/../proyek.html">Galeri Proyek</a></li>
+          <li><a href="menu/../workshop.html">Workshop & Lokasi</a></li>
+          <li>
+            <a href="menu/../tentang.html" class="active">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PROFIL & LEGALITAS -->
+    <section class="section">
+      <div class="container grid-2" style="align-items: center">
+        <div>
+          <span
+            class="badge"
+            style="color: #003e1c; border-color: rgba(11, 73, 41, 0.4)"
+            >Profil Perusahaan</span
+          >
+          <h1 style="font-size: 2.3rem; margin-bottom: 12px">
+            PT Multi Cipta Glass (MCG)
+          </h1>
+          <p style="color: var(--text-muted); margin-bottom: 16px">
+            Kontraktor spesialis aplikator kaca arsitektural, aluminium, dan
+            sistem fasad modern. Kami bermitra dengan kontraktor utama dan
+            developer dalam mewujudkan selubung bangunan berstandar tinggi.
+          </p>
+          <a href="menu/../rab-form.html" class="btn btn-primary"
+            >Ajukan RAB Proyek</a
+          >
+        </div>
+        <div class="card" style="border-top: 4px solid var(--primary)">
+          <h3>🏛️ Legalitas & Kualifikasi</h3>
+          <ul
+            style="
+              margin-left: 20px;
+              margin-top: 10px;
+              font-size: 0.92rem;
+              line-height: 1.8;
+              color: var(--text-muted);
+            "
+          >
+            <li>
+              <strong>Badan Hukum:</strong> PT Multi Cipta Glass (PKP Resmi)
+            </li>
+            <li><strong>Perizinan:</strong> NIB & SBU Konstruksi Spesialis</li>
+            <li>
+              <strong>K3 Lapangan:</strong> Bersertifikat Working at Height
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUKTUR ORGANISASI -->
+    <section class="section section-soft">
+      <div class="container">
+        <div
+          class="section-header"
+          style="text-align: center; margin: 0 auto 36px auto"
+        >
+          <span
+            class="badge"
+            style="color: #003e1c; border-color: rgba(11, 73, 41, 0.4)"
+            >Manajemen & Tim</span
+          >
+          <h2>Susunan Organisasi Perusahaan</h2>
+          <p>
+            Sinergi profesional antara engineering, fabrikasi workshop, dan
+            operasional proyek.
+          </p>
+        </div>
+
+        <div class="org-chart">
+          <div class="org-card org-top">
+            <div class="org-avatar">👔</div>
+            <span class="org-role" style="color: var(--mint)"
+              >Direktur Utama</span
+            >
+            <h4>Ir. Hendra Wijaya</h4>
+            <p style="font-size: 0.82rem; color: #cbd5e1; margin-top: 4px">
+              Pengarah Strategis & Kemitraan Tender
+            </p>
+          </div>
+
+          <div class="org-line-vertical"></div>
+
+          <div class="org-level-2">
+            <div class="org-branch">
+              <div class="org-card">
+                <div class="org-avatar">📐</div>
+                <span class="org-role">Divisi Engineering & QS</span>
+                <h4>Rizky Pratama, S.T.</h4>
+                <ul class="org-team-list">
+                  <li>Estimator & Quantity Surveyor</li>
+                  <li>Drafter Shop Drawing & 3D</li>
+                  <li>Analisis Beban Struktur Fasad</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="org-branch">
+              <div class="org-card">
+                <div class="org-avatar">🏭</div>
+                <span class="org-role">Divisi Workshop & Fabrikasi</span>
+                <h4>Dedi Kurniawan</h4>
+                <ul class="org-team-list">
+                  <li>Supervisor Mesin CNC & Cutting</li>
+                  <li>Quality Control (QC) Modul</li>
+                  <li>Logistik & Armada Pengiriman</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="org-branch">
+              <div class="org-card">
+                <div class="org-avatar">🏗️</div>
+                <span class="org-role">Divisi Operasional Lapangan</span>
+                <h4>Agus Setiawan, S.T.</h4>
+                <ul class="org-team-list">
+                  <li>Site Manager Proyek Gedung</li>
+                  <li>Kepala Aplikator & Instalatur</li>
+                  <li>Safety Officer (HSE & K3)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container grid-3">
+        <div>
+          <h4>Multi Cipta Glass (MCG)</h4>
+          <p style="font-size: 0.9rem">
+            Kontraktor spesialis fasad kaca & aluminium arsitektural terpercaya.
+          </p>
+        </div>
+        <div>
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="menu/../layanan.html">Keahlian & Layanan</a></li>
+            <li><a href="menu/../proyek.html">Galeri Proyek</a></li>
+            <li><a href="menu/../workshop.html">Workshop & Lokasi</a></li>
+            <li><a href="menu/../tentang.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <p style="font-size: 0.9rem">
+            Jl. Asem II GG. H. Muhammad No. 53 EE, Cipete Selatan, Cilandak,
+            Jakarta Sealtan 12410<br />Email: companymulticiptaglass@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 PT Multi Cipta Glass. Hak Cipta Dilindungi.
+      </div>
+    </footer>
+
+    <a href="https://wa.me/6282111809332" target="_blank" class="wa-float"
+      >💬 Chat Estimator</a
+    >
+    <script src="../script.js"></script>
+  </body>
+</html>

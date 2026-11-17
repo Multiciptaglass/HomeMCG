@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Proyek | MCG</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <a href="../index.html" class="brand">
+          <span class="brand-box">MCG</span>
+          <span>Multi Cipta Glass</span>
+        </a>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="menu/../layanan.html">Keahlian & Layanan</a></li>
+          <li>
+            <a href="menu/../proyek.html" class="active">Galeri Proyek</a>
+          </li>
+          <li><a href="menu/../workshop.html">Workshop & Lokasi</a></li>
+          <li><a href="menu/../tentang.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HEADER & FILTER -->
+    <section class="section section-soft">
+      <div class="container">
+        <span
+          class="badge"
+          style="color: #003e1c; border-color: rgba(11, 73, 41, 0.4)"
+          >Portofolio Terpilih</span
+        >
+        <h1>Galeri Proyek & Studi Kasus</h1>
+        <p
+          style="
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 24px;
+          "
+        >
+          Pilih kategori sistem fasad di bawah ini untuk menyaring portofolio
+          pekerjaan PT Multi Cipta Glass.
+        </p>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap">
+          <button
+            class="btn btn-primary filter-btn"
+            onclick="filterProyek('semua', this)"
+          >
+            Tampilkan Semua Proyek
+          </button>
+          <button
+            class="btn btn-outline filter-btn"
+            onclick="filterProyek('curtain-wall', this)"
+          >
+            Curtain Wall
+          </button>
+          <button
+            class="btn btn-outline filter-btn"
+            onclick="filterProyek('acp', this)"
+          >
+            ACP Cladding
+          </button>
+          <button
+            class="btn btn-outline filter-btn"
+            onclick="filterProyek('kaca-kanopi', this)"
+          >
+            Kaca & Kanopi
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAFTAR PROYEK -->
+    <section class="section">
+      <div class="container grid-3" id="galeriGrid">
+        <div
+          class="card project-item"
+          data-kategori="curtain-wall"
+          style="
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <img
+            src="../img/adidasdepok.jpg"
+            alt="Adidas Depok"
+            style="height: 200px; object-fit: cover"
+          />
+          <div
+            style="
+              padding: 22px;
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            "
+          >
+            <div>
+              <span class="badge-proyek" style="margin-bottom: 8px"
+                >Curtain Wall</span
+              >
+              <h3>Mall Depok Adidas Store</h3>
+              <p
+                style="
+                  font-size: 0.88rem;
+                  color: var(--text-muted);
+                  margin: 8px 0 16px 0;
+                "
+              >
+                📍 Jawa Barat| ± 50 m²<br />Sistem Stick Mullion 150x55mm +
+                Stopsol Blue Green.
+              </p>
+            </div>
+            <button
+              class="btn btn-outline"
+              style="width: 100%"
+              onclick="
+                lihatDetailProyek(
+                  'Mall Depok Adidas Store',
+                  'Jawa barat',
+                  '4.200 m²',
+                  'Curtain Wall',
+                  'Profil Aluminium Extrusion Powder Coating Dark Grey, Kaca Asahimas Stopsol Blue Green 8mm Tempered.',
+                )
+              "
+            >
+              Lihat Spesifikasi
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="card project-item"
+          data-kategori="acp"
+          style="
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <img
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
+            alt="RS Mitra Sehat"
+            style="height: 200px; object-fit: cover"
+          />
+          <div
+            style="
+              padding: 22px;
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            "
+          >
+            <div>
+              <span class="badge-proyek" style="margin-bottom: 8px"
+                >ACP Cladding</span
+              >
+              <h3>Gedung Utama RS Mitra Sehat</h3>
+              <p
+                style="
+                  font-size: 0.88rem;
+                  color: var(--text-muted);
+                  margin: 8px 0 16px 0;
+                "
+              >
+                📍 Bekasi | ± 3.150 m²<br />ACP Seven PVDF 4mm Metallic Silver +
+                Rangka Galvanis.
+              </p>
+            </div>
+            <button
+              class="btn btn-outline"
+              style="width: 100%"
+              onclick="
+                lihatDetailProyek(
+                  'Gedung Utama RS Mitra Sehat',
+                  'Bekasi',
+                  '3.150 m²',
+                  'ACP Cladding',
+                  'Panel ACP Seven PVDF 4mm warna Metallic Silver, Rangka Hollow Galvanis 40x40x1.6mm.',
+                )
+              "
+            >
+              Lihat Spesifikasi
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="card project-item"
+          data-kategori="kaca-kanopi"
+          style="
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
+            alt="Showroom"
+            style="height: 200px; object-fit: cover"
+          />
+          <div
+            style="
+              padding: 22px;
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            "
+          >
+            <div>
+              <span class="badge-proyek" style="margin-bottom: 8px"
+                >Kaca & Kanopi</span
+              >
+              <h3>Flagship Showroom Otomotif</h3>
+              <p
+                style="
+                  font-size: 0.88rem;
+                  color: var(--text-muted);
+                  margin: 8px 0 16px 0;
+                "
+              >
+                📍 BSD City, Tangerang | ± 1.450 m²<br />Spider Glass Tempered
+                12mm + Kanopi Laminated.
+              </p>
+            </div>
+            <button
+              class="btn btn-outline"
+              style="width: 100%"
+              onclick="
+                lihatDetailProyek(
+                  'Flagship Showroom Otomotif',
+                  'BSD City, Tangerang',
+                  '1.450 m²',
+                  'Kaca & Kanopi',
+                  'Kaca Clear Tempered 12mm dengan Fin Glass Stiffener, Fitting Spider SUS 304.',
+                )
+              "
+            >
+              Lihat Spesifikasi
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL DETAIL PROYEK -->
+    <div
+      class="modal-overlay"
+      id="modalProyek"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        padding: 20px;
+      "
+    >
+      <div
+        class="card"
+        style="
+          max-width: 500px;
+          width: 100%;
+          text-align: left;
+          background: #cecece;
+        "
+      >
+        <span class="badge" id="mKategori">Kategori</span>
+        <h3 id="mJudul" style="font-size: 1.35rem; margin-bottom: 10px">
+          Judul Proyek
+        </h3>
+        <p style="font-size: 0.9rem; margin-bottom: 6px">
+          <strong>📍 Lokasi:</strong> <span id="mLokasi"></span>
+        </p>
+        <p style="font-size: 0.9rem; margin-bottom: 12px">
+          <strong>📐 Volume:</strong> <span id="mVolume"></span>
+        </p>
+        <div
+          style="
+            background: var(--bg-soft);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            margin-bottom: 20px;
+          "
+        >
+          <strong>Spesifikasi Material:</strong><br /><span id="mSpek"></span>
+        </div>
+        <div style="display: flex; gap: 10px">
+          <a
+            href="menu/../rab-form.html"
+            class="btn btn-primary"
+            style="flex: 1"
+            >Minta RAB Serupa</a
+          >
+          <button class="btn btn-outline" onclick="tutupModalProyek()">
+            Tutup
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container grid-3">
+        <div>
+          <h4>PT Multi Cipta Glass (MCG)</h4>
+          <p style="font-size: 0.9rem">
+            Kontraktor spesialis fasad kaca & aluminium arsitektural terpercaya.
+          </p>
+        </div>
+        <div>
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="menu/../layanan.html">Keahlian & Layanan</a></li>
+            <li><a href="menu/../proyek.html">Galeri Proyek</a></li>
+            <li><a href="menu/../workshop.html">Workshop & Lokasi</a></li>
+            <li><a href="menu/../tentang.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <p style="font-size: 0.9rem">
+            Jl. Asem II GG. H. Muhammad No. 53 EE, Cipete Selatan, Cilandak,
+            Jakarta Sealtan 12410<br />Email: companymulticiptaglass@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 PT Multi Cipta Glass. Hak Cipta Dilindungi.
+      </div>
+    </footer>
+
+    <a href="https://wa.me/6282111809332" target="_blank" class="wa-float"
+      >💬 Chat Estimator</a
+    >
+    <script src="../script.js"></script>
+  </body>
+</html>
